@@ -206,10 +206,12 @@ button {
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 100vw;
     background-color: var(--color-white);
     box-shadow: var(--shadow-sm);
     z-index: 1000;
     transition: var(--transition-base);
+    overflow-x: hidden;
 }
 
 .header.scroll-header {
@@ -1314,15 +1316,24 @@ button {
 
     /* HEADER Y NAV MEJORADO */
     .nav {
-        padding: 0 var(--spacing-md);
+        padding: 0;
+    }
+
+    .nav__brand {
+        padding-left: var(--spacing-md);
+    }
+
+    .nav__toggle {
+        padding-right: var(--spacing-md);
     }
 
     .nav__logo {
-        width: 80px;
+        width: 60px;
     }
 
     .nav__name {
-        font-size: var(--font-size-lg);
+        font-size: var(--font-size-sm);
+        white-space: nowrap;
     }
 
     .nav__menu {
@@ -1330,8 +1341,8 @@ button {
         top: 0;
         right: -100%;
         width: 80%;
-        max-width: 300px;
-        height: 100vh;
+        max-width: 100%;
+        height: 150vh;
         background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
         box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
         padding: var(--spacing-4xl) var(--spacing-xl);
@@ -1559,11 +1570,11 @@ button {
 
     /* BOTONES FLOTANTES */
     .whatsapp-button {
-        width: 60px;
-        height: 60px;
-        font-size: 2rem;
-        bottom: 20px;
-        right: 20px;
+        width: 55px;
+        height: 55px;
+        font-size: 1.8rem;
+        bottom: 15px;
+        right: 15px;
     }
 
     .scroll-top {
@@ -1583,14 +1594,16 @@ button {
 
     .container {
         padding: 0 var(--spacing-md);
+        width: 100%;
+        overflow: hidden;
     }
 
     /* HEADER */
     .nav__name {
-        font-size: var(--font-size-base);
+        font-size: var(--font-size-xs);
     }
     .nav__logo {
-        width: 80px;
+        width: 50px;
     }
 
     /* HERO */
@@ -1646,10 +1659,13 @@ button {
         font-size: var(--font-size-sm);
     }
     .service-card:hover{
-        max-height: 520px;
+        max-height: 550px;
     }
     .service-card:hover .service-card__content {
     transform: translateY(-240px);
+    }
+    .service-card__title {
+        font-size: 1.3rem;
     }
 
     /* PRACTICE CARDS */
@@ -1714,18 +1730,18 @@ button {
     /* BOTONES FLOTANTES */
     .whatsapp-button,
     .scroll-top {
-        width: 65px;
-        height: 65px;
-        font-size: var(--font-size-3xl);
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
     }
 
     .whatsapp-button {
-        right: var(--spacing-md);
-        bottom: var(--spacing-md);
+        left: 65px;
+        bottom: 10px;
     }
 
     .scroll-top {
-        left: var(--spacing-md);
-        bottom: var(--spacing-md);
+        left: 10px;
+        bottom: 10px;
     }
 }
