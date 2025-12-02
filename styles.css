@@ -90,6 +90,7 @@ body {
     color: var(--color-text);
     line-height: 1.7;
     background-color: var(--color-white);
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1377,27 +1378,35 @@ button {
     /* HERO SECTION MEJORADO */
     .hero {
         min-height: auto;
-        padding: calc(var(--header-height) + var(--spacing-2xl)) 0 var(--spacing-3xl);
+        padding: calc(var(--header-height) + var(--spacing-xl)) 0 var(--spacing-2xl);
     }
 
     .hero__container {
-        padding: 0 var(--spacing-md);
+        padding: 0;
+        gap: var(--spacing-xl);
+    }
+
+    .hero__text {
+        padding: 0 var(--spacing-lg);
+        text-align: center;
     }
 
     .hero__image {
-        margin: 0 calc(-1 * var(--spacing-md));
-        max-width: none;
+        margin: 0;
+        max-width: 100%;
+        order: -1;
     }
 
     .hero__image-wrapper {
-        width: 100%;
-        border-radius: 0;
-        max-height: 500px;
+        width: calc(100% - 2 * var(--spacing-lg));
+        margin: 0 auto;
+        border-radius: var(--radius-lg);
+        height: 300px;
     }
 
     .hero__image-wrapper img {
         object-fit: cover;
-        height: 400px;
+        height: 100%;
     }
 
     .hero__image-decoration {
@@ -1405,21 +1414,22 @@ button {
     }
 
     .hero__title-main {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .hero__title-sub {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .hero__description {
         font-size: var(--font-size-base);
-        margin-bottom: var(--spacing-xl);
+        margin-bottom: var(--spacing-lg);
     }
 
     .hero__buttons {
         gap: var(--spacing-md);
-        margin-bottom: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .hero__scroll {
@@ -1549,10 +1559,11 @@ button {
 
     /* BOTONES FLOTANTES */
     .whatsapp-button {
-        width: 70px;
-        height: 70px;
-        font-size: 2.5rem;
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
         bottom: 20px;
+        right: 20px;
     }
 
     .scroll-top {
@@ -1578,18 +1589,36 @@ button {
     .nav__name {
         font-size: var(--font-size-base);
     }
-
     .nav__logo {
         width: 80px;
     }
 
     /* HERO */
+    .hero {
+        padding: calc(var(--header-height) + var(--spacing-md)) 0 var(--spacing-xl);
+    }
+
+    .hero__image-wrapper {
+        height: 250px;
+        margin: 0 var(--spacing-md);
+        border-radius: var(--radius-md);
+    }
+
+    .hero__text {
+        padding: 0 var(--spacing-md);
+    }
+
     .hero__title-main {
-        font-size: 1.85rem;
+        font-size: 1.75rem;
     }
 
     .hero__title-sub {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+
+    .hero__description {
+        font-size: var(--font-size-sm);
+        margin-bottom: var(--spacing-md);
     }
 
     .hero__buttons {
@@ -1615,6 +1644,12 @@ button {
 
     .section__description {
         font-size: var(--font-size-sm);
+    }
+    .service-card:hover{
+        max-height: 520px;
+    }
+    .service-card:hover .service-card__content {
+    transform: translateY(-240px);
     }
 
     /* PRACTICE CARDS */
@@ -1675,23 +1710,22 @@ button {
     .footer__content {
         gap: var(--spacing-xl);
     
-
+    }
     /* BOTONES FLOTANTES */
     .whatsapp-button,
     .scroll-top {
-        width: 45px;
-        height: 45px;
-        font-size: var(--font-size-lg);
+        width: 65px;
+        height: 65px;
+        font-size: var(--font-size-3xl);
     }
 
     .whatsapp-button {
-        left: var(--spacing-md);
-        bottom: 70px;
-    }
-
-    .scroll-top {
         right: var(--spacing-md);
         bottom: var(--spacing-md);
     }
-}
+
+    .scroll-top {
+        left: var(--spacing-md);
+        bottom: var(--spacing-md);
+    }
 }
