@@ -1736,12 +1736,12 @@ button {
     }
 
     .whatsapp-button {
-        left: 65px;
+        left: 10px;
         bottom: 10px;
     }
 
     .scroll-top {
-        left: 10px;
+        left: 65px;
         bottom: 10px;
     }
 }
